@@ -251,7 +251,7 @@ namespace NHibernate.Spatial.Oracle
                 else
                 {
                     et = ElementType.INTERIOR_RING_STRAIGHT_SEGMENTS;
-                    coords = polygon.InteriorRings[i - 1].Coordinates;
+                    coords = polygon.InteriorRings[i/3 - 1].Coordinates;
                     
                     // 2003: interior polygon ring (must be specified in clockwise order)
                     if (CGAlgorithms.IsCCW(coords))
